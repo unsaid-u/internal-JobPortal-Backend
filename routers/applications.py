@@ -46,7 +46,7 @@ def apply(request:schema.Applications, db: Session = Depends(database.get_db)):
     db.add(obj)
     db.commit()
     db.refresh(obj)
-    print("added successfully")
+    
 
 
 @router.delete('/delete/{appID}')
